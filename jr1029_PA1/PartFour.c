@@ -12,5 +12,15 @@ int main()
     printf("Enter value of a: ");
     scanf("%d",&a); //scanning integer variable to a
 
+    float sum = 1.0;
+    float t = 1.0;
+
+    //iterating through 1-a
+    for(int i =1;i<=a;i++)
+    {
+        t = (t*x*x)/i; //using taylor series
+        sum += t; //add previous value to sum
+    }
+
     return 0;
 }
