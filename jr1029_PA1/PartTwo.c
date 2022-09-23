@@ -16,9 +16,10 @@ int main()
     //calculating value of y
     for(int i =0; i<= a; i++)
     {
-        y += ((factorial(n*2)) + b);
+        y += ((factorial(i*2)) + b);
     }
 
+    printf("\ny = %d",y); //printing y
 
     return 0;
 }
