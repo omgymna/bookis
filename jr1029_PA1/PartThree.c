@@ -12,6 +12,10 @@ int main()
     digit = 0;
 
     //geting line of string input
+    printf("Enter sentence: ");
+    fgets(sentence,sizeof(sentence), stdin);
+
+    
 
     return 0;
 }
