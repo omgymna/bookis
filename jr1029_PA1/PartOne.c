@@ -4,7 +4,7 @@
 
 int main()
 {
-    int a,n,y,i,p;
+    int a,n,y,i,x;
     y = 0;
 
     printf("Enter a value for a: ");
