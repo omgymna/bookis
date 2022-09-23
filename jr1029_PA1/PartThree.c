@@ -14,7 +14,7 @@ int main()
     printf("Enter sentence: ");
     fgets(sentence,sizeof(sentence), stdin);
 
-    while(sentence[length]!='\0')
+    while(sentence[length]!='\0') //iterating until null character
     {
         if(sentence[length]==' ')
         {
@@ -22,11 +22,13 @@ int main()
         }
         if(sentence[length]=='a'||sentence[length]=='e'||sentence[length]=='i'||sentence[length]=='o'||sentence[length]=='u'||sentence[length]=='A'||sentence[length]=='E'||sentence[length]=='I'||sentence[length]=='O'||sentence[length]=='U')
         {
-            vowels++;
+            vowels++; //checking for vowels
         }
 
         length++;
     }
+
+    length--; //ignore the null character
 
     printf("Number of words: %d", words);
     printf("\nNumber of vowels: %d", vowels);
