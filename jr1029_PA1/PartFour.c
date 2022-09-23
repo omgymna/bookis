@@ -22,7 +22,7 @@ int main()
         sum += t; //add previous value to sum
     }
 
-    printf("Value of e^(x^2) = %f",sum);
+    printf("Value of e^(x^2) = %f\n",sum);
 
     return 0;
 }
