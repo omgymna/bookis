@@ -20,7 +20,7 @@ int main()
 
     printf("Enter a value for a: ");
     scanf("%d",&a); //scanning for a
-    printf("\nEnter a value for b: ");
+    printf("Enter a value for b: ");
     scanf("%d",&b); //scanning into b;
 
     //calculating value of y
@@ -29,7 +29,7 @@ int main()
         y += (factorial(i*2) + b);
     }
 
-    printf("\ny = %d",y); //printing y
+    printf("y = %d\n",y); //printing y
 
     return 0;
 }
