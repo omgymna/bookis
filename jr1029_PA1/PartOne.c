@@ -1,6 +1,6 @@
 // part one of programmin assignment
 //Jimena Romo Cuevas CSCE 2610
-#include <stdio.h?
+#include <stdio.h>
 
 int main()
 {
