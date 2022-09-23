@@ -9,5 +9,8 @@ int main()
     printf("Enter value of x: ");
     scanf("%f",&x); //scanning floating point variable to x
 
+    printf("Enter value of a: ");
+    scanf("%d",&a); //scanning integer variable to a
+
     return 0;
 }
