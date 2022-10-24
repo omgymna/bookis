@@ -12,3 +12,6 @@ To Compile with makefile on Linux:
 make or make all
 
 To run: ./main
+
+
+This code has a menu option with 4 main choices of finding the leading zeroes, performing an endian swap, determining parity, and rotating positions, using C bitwise operators on a given 32-bit number.
