@@ -1,4 +1,10 @@
 /* minor3.c - using producer-consumer paradigm. */
+
+/*
+    Jimena Romo Cuevas - CSCE 3600.004 11-4-2022
+    assignment updating a given program echoing back one by one each line
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
