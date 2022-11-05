@@ -66,7 +66,7 @@ void * producer(void *arg)
        // -- if full, unlock and sleep until signalled, and loop again to handle spurious wakes
        // -- if not full, keep locked and proceed to place character on shared buffer
 
-       // loop to account for spurious wakes
+       // loop for spur. awakes
        while (!(shared_count < NITEMS))
        {
            //if full release
@@ -85,7 +85,7 @@ void * producer(void *arg)
        else
            prod_index++;
       
-       // signalling the condition variable
+       // signalling cond var.
        pthread_cond_signal(&cond_empty);
 
        // release mutex lock
@@ -111,22 +111,27 @@ void * consumer(void *arg)
         // -- if not empty, keep locked and proceed to get character from shared buffer
         while (!(shared_count > 0))
        {
-           // if buffer is empty, release mutex lock
-           // and sleep until signalled
+           // iif empty 
            pthread_cond_wait(&cond_empty, &mutex);
        }
         // read key from shared buffer
         key = shared_buffer[cons_index];
-        
+
         // echo key
         printf("consumer %lu: %c\n", (long unsigned int) id, key);
+
         // update shared count variable
         shared_count--;
-        // update consumer index
+
+        // update cons index
         if (cons_index == NITEMS - 1)
             cons_index = 0;
         else
             cons_index++;
+
+        //signal when not full
+        pthread_cond_signal(&cond_full);
+
         // release mutex lock
         pthread_mutex_unlock(&mutex);
         }
