@@ -15,6 +15,9 @@ int MinimumMultiplication(int a[], int n)
 
     //diagonals are 0;
     int m[n][n];            //used to store the costs (like in the table)
+
+    //for brackets from i to j
+    int p[n][n];
  
     int i, j;
     int k, L, q;
@@ -35,7 +38,10 @@ int MinimumMultiplication(int a[], int n)
                 // q = cost of the multiplications
                 q = m[i][k] + m[k + 1][j] + a[i - 1] * a[k] * a[j];
                 if (q < m[i][j])
+                {
                     m[i][j] = q;
+                    p[i][j] = k;
+                }
             }
         }
     }
