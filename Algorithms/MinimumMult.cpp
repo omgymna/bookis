@@ -4,7 +4,7 @@
     matrices of your choice.
 */
 
-
+//Jimena Romo Cuevas  - CSCE 4110 Assignment 3
 #include <iostream>
 
 using namespace std;
