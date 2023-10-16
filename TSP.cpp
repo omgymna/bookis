@@ -1,9 +1,10 @@
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 //takes a 2D vector array
-void findMinRoute( vector<vector<int>> tsp)
+void findMinRoute( vector<vector<int> > tsp)
 {
     int sum = 0, counter = 0;
     int i =0, j=0;
@@ -13,7 +14,7 @@ void findMinRoute( vector<vector<int>> tsp)
     map<int,int> visited;   
 
     visited[0] = 1; //starting from first city      either 0 for not visited or 1 for visited
-    int path[tsp.size()] //result array
+    int path[tsp.size()]; //result array
 
     //traversal
     while( i<tsp.size() && j<tsp[i].size())
@@ -65,5 +66,13 @@ void findMinRoute( vector<vector<int>> tsp)
 
 int main()
 {
+    vector<vector<int> > tsp = { {-1,8,13,18,20},
+                                {3,-1,7,8,10},
+                                {4,11,-1,10,7},
+                                {6,6,7,-1,11},
+                                {10,6,2,1,-1} };
+
+    findMinRoute(tsp);
+
     return 0;
 }
